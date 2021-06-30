@@ -1,0 +1,48 @@
+@media screen and (max-width: $tablet-width) {
+
+  $speed-open-sidebar: .2s;
+
+  .hide-on-phone {
+    display: none !important;
+  }
+
+  .show-on-phone {
+    display: inline-block !important;
+  }
+
+
+  .sidebar {
+    text-align: center;
+
+    height: 100% !important;
+    transform: translateX(-100%);
+
+    &-container-fix {
+      width: 0 !important;
+    }
+
+    &-show {
+      transform: translateX(0%);
+    }
+
+    transition: $speed-open-sidebar;
+  }
+
+  .toolbar {
+    &-content {
+      left: 0 !important;
+      width: 100%;
+    }
+
+    &-sidebar-opened {
+      margin-left: $sidebar-width !important;
+    }
+
+    transition: $speed-open-sidebar;
+  }
+
+  .content {
+    padding: 1em !important;
+  }
+
+}
